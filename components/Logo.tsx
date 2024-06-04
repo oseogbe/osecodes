@@ -1,19 +1,8 @@
-"use client"
-
-import Image from "next/image"
-import Link from "next/link"
+import { spartan } from "@/app/fonts"
 
 const Logo = () => {
     return (
-        <Link href='/'>
-            <Image
-                src='/logo.svg'
-                width={54}
-                height={54}
-                priority
-                alt=''
-            />
-        </Link>
+        <div className={`text-3xl lg:text-4xl ${spartan.className} font-bold tracking-tighter`}>ose<span className="text-primary">codes</span>.</div>
     )
 }
 

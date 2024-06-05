@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { poppins } from "./fonts";
+import { outfit } from "./fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scrollbar-hide" suppressHydrationWarning>
-      <body className={poppins.className}>
+      <body className={outfit.className}>
         <ThemeProvider attribute='class' defaultTheme='light'>
           <Header />
           {children}

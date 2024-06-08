@@ -13,18 +13,6 @@ import { Pagination } from "swiper/modules"
 
 const reviewsData = [
     {
-        avatar: '/reviews/avatar-2.png',
-        name: 'Adnan Bashir',
-        job: 'Entrepreneur',
-        review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero omnis, vel quasi nobis repudiandae magni.'
-    },
-    {
-        avatar: '/reviews/avatar-6.png',
-        name: 'Teju Gbenga',
-        job: 'CEO, Beauty&Spa',
-        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi saepe vitae molestias illum deleniti.'
-    },
-    {
         avatar: '/reviews/avatar-5.png',
         name: 'Sofia Jackson',
         job: 'Baker',
@@ -35,6 +23,18 @@ const reviewsData = [
         name: 'Jerry Parker',
         job: 'Manager, ABDelivery',
         review: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, sapiente repellendus repellat possimus eligendi sequi!'
+    },
+    {
+        avatar: '/reviews/avatar-2.png',
+        name: 'Adnan Bashir',
+        job: 'Entrepreneur',
+        review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero omnis, vel quasi nobis repudiandae magni.'
+    },
+    {
+        avatar: '/reviews/avatar-6.png',
+        name: 'Teju Gbenga',
+        job: 'CEO, Beauty&Spa',
+        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi saepe vitae molestias illum deleniti.'
     },
     {
         avatar: '/reviews/avatar-3.png',
@@ -57,17 +57,22 @@ const Reviews = () => {
                 <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
                 <Swiper
                     slidesPerView={1}
+                    slidesPerGroup={1}
                     breakpoints={{
                         640: {
-                            slidesPerView: 2
+                            slidesPerView: 2,
                         },
                         1440: {
-                            slidesPerView: 3
+                            slidesPerView: 3,
                         }
                     }}
                     spaceBetween={30}
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 5000
+                    }}
+                    loop={true}
                     className="h-[350px]"
                 >
                     {

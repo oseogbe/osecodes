@@ -54,26 +54,26 @@ const Hero = () => {
                         <Badge
                             containerStyles="absolute top-[24%] -left-[5rem]"
                             icon={RiBriefcase4Fill}
-                            endCountNum={3}
+                            endCountNum={4}
                             badgeText="Years of Experience"
                         />
                         <Badge
                             containerStyles="absolute top-[80%] -left-[1rem]"
                             icon={RiTodoFill}
-                            endCountNum={5}
+                            endCountNum={8}
                             badgeText="Finished Projects"
                         />
                         <Badge
                             containerStyles="absolute top-[55%] -right-8"
                             icon={RiTeamFill}
-                            endCountNum={2}
-                            endCountText="k"
+                            endCountNum={5}
+                            // endCountText="k"
                             badgeText="Happy Clients"
                         />
                         <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
                         <DevImg
                             containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-                            imgSrc="/hero/developer.png"
+                            imgSrc=""
                         />
                     </div>
                 </div>

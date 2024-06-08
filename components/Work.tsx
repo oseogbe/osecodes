@@ -82,7 +82,7 @@ const Work = () => {
                 </div>
                 <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
                     <Swiper
-                        className="h-[560px]"
+                        className="h-[640px] xl:h-[560px]"
                         slidesPerView={1}
                         breakpoints={{
                             640: {

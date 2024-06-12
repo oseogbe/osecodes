@@ -13,6 +13,8 @@ import DevImg from "./DevImg"
 import Badge from "./Badge"
 import Socials from "./Socials"
 
+import { projectData } from "@/lib/data";
+
 const Hero = () => {
     const rolesEl = useRef(null)
 
@@ -60,7 +62,7 @@ const Hero = () => {
                         <Badge
                             containerStyles="absolute top-[80%] -left-[1rem]"
                             icon={RiTodoFill}
-                            endCountNum={8}
+                            endCountNum={projectData.length}
                             badgeText="Finished Projects"
                         />
                         <Badge

@@ -78,7 +78,7 @@ const careerData = [
         data: [
             {
                 company: "Legend",
-                role: "Full-stack Developer",
+                role: "Development Manager",
                 years: "May 2024 - Till present"
             },
             {

@@ -23,7 +23,7 @@ const ProjectsPage = () => {
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Projects</h2>
                 <Tabs defaultValue={category} className="mb-24 xl:mb-48">
-                    <TabsList className={`w-full grid h-full md:grid-cols-${categories.length} md:max-w-auto xl:max-w-[940px] mb-12 mx-auto md:border dark:border-none`}>
+                    <TabsList className={`w-full grid h-full md:grid-cols-${uniqueCategories.length} md:max-w-auto xl:max-w-[940px] mb-12 mx-auto md:border dark:border-none`}>
                         {
                             categories.map((category, i) => (
                                 <TabsTrigger

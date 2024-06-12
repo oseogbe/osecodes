@@ -10,7 +10,7 @@ import { Badge } from "./ui/badge"
 interface ProjectCardProps {
     project: {
         image: string
-        category: string
+        category: string[]
         name: string
         description: string
         link: string
@@ -18,9 +18,11 @@ interface ProjectCardProps {
     }
 }
 
+const badgeColors = ['bg-black', 'bg-primary']
+
 const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
-        <Card className="group overflow-hidden relative">
+        <Card className="group overflow-hidden relative selection:none">
             <CardHeader className="p-0">
                 <div className="relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden">
                     <Image
@@ -48,7 +50,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 </div>
             </CardHeader>
             <div className="h-full px-8 py-6">
-                <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">{project.category}</Badge>
+                <div className="flex items-center gap-x-3 mb-2 absolute top-4 left-5">
+                    {
+                        project.category.map((category, i) => (
+                            <Badge key={i} className={`${badgeColors[i]} uppercase text-xs font-medium`}>{category}</Badge>
+                        ))
+                    }
+                </div>
                 <h4 className="heading-4 mb-1">{project.name}</h4>
                 <p className="text-muted-foreground text-lg">{project.description}</p>
             </div>

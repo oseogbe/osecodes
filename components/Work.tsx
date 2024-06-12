@@ -12,64 +12,7 @@ import { Pagination } from "swiper/modules"
 
 import ProjectCard from "./ProjectCard"
 
-const projectData = [
-    {
-        image: '/work/3.png',
-        category: 'react js',
-        name: 'Nexa Website',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-    {
-        image: '/work/2.png',
-        category: 'next js',
-        name: 'Greenflats Website',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-    {
-        image: '/work/1.png',
-        category: 'full-stack',
-        name: 'Evolve Website',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-    {
-        image: '/work/4.png',
-        category: 'laravel',
-        name: 'Ignite Website',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-    {
-        image: '/work/3.png',
-        category: 'node js',
-        name: 'Sabway API',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-    {
-        image: '/work/1.png',
-        category: 'vue js',
-        name: 'Weather3 Website',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-    {
-        image: '/work/2.png',
-        category: 'nest js',
-        name: 'CryptoMask API',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequatur at debitis nisi cum minima, unde voluptates quae ab veritatis, aliquam deserunt! Ea ut minus voluptas nobis quas aliquid quo.',
-        link: '/#',
-        github: '/#'
-    },
-]
+import { projectData } from "@/lib/data"
 
 const Work = () => {
     return (

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs"
 import ProjectCard from "@/components/ProjectCard"
@@ -13,11 +13,9 @@ const ProjectsPage = () => {
 
     const filteredProjects = projectData.filter(project => category === 'all projects' ? project : project.categoryText === category)
 
-    // useEffect(() => {
-    //     setCategories(['all projects', ...new Set(projectData.map((project) => project.categoryText))])
-    //     console.log("length", categories.length)
-    // }, [categories.length])
-
+    useEffect(() => {
+        setCategories(['all projects', ...new Set(projectData.map((project) => project.categoryText))])
+    }, [])
 
     return (
         <section className="min-h-screen pt-12">

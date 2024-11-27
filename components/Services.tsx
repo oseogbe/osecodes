@@ -13,17 +13,17 @@ const servicesData = [
     {
         icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores inventore magnam, sint voluptates consequuntur amet tenetur minima ab iure enim qui nemo pariatur tempore vitae deserunt doloribus architecto doloremque voluptatum.'
+        description: 'Transform your ideas into fully functional and visually stunning websites. I specialize in creating responsive, user-friendly designs using modern frameworks and best practices to ensure your web presence stands out and performs seamlessly.'
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8} />,
         title: 'Mobile Development',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi aliquam illum molestiae, inventore quasi sunt accusamus, fugiat corporis ea ipsum consectetur possimus officiis corrupti, ipsa in quibusdam rem rerum suscipit.'
+        description: 'Bring your app ideas to life with robust and intuitive mobile solutions for both Android and iOS platforms. I develop mobile applications tailored to your needs, focusing on performance, scalability, and a delightful user experience.'
     },
     {
         icon: <Gem size={72} strokeWidth={0.8} />,
         title: 'Dev-Ops',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reiciendis vel consectetur. Excepturi quia laudantium placeat accusamus eius voluptas sit veniam officiis incidunt veritatis.'
+        description: 'Streamline your development process and enhance operational efficiency. With expertise in CI/CD pipelines, cloud infrastructure, and automated workflows, I help bridge the gap between development and operations for faster, more reliable deployments.'
     },
 ]
 

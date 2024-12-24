@@ -79,7 +79,7 @@ const careerData = [
             {
                 company: "Legend",
                 role: "Development Manager",
-                years: "May 2024 - Till present"
+                years: "May 2024 - Dec 2024"
             },
             {
                 company: "EFNetwork",

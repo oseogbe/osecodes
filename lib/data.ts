@@ -26,4 +26,13 @@ export const projectData = [
         link: 'http://102.220.204.78:8003',
         github: 'https://github.com/oseogbe/road-trip-planner'
     },
+    {
+        image: '/work/4.png',
+        category: ['react js'],
+        categoryText: 'react js',
+        name: 'Snapshare',
+        description: 'A social web app with a stunning UI, a native mobile feel, an infinite scroll feature, and amazing performance using React JS, React Context API, React Router, Tanstack Query, Appwrite, TypeScript, TailwindCSS and ShadcnUI.',
+        link: 'https://snapshare-dev.vercel.app',
+        github: 'https://github.com/oseogbe/snapshare'
+    },
 ]

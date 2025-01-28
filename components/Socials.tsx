@@ -9,11 +9,11 @@ interface SocialsProps {
 
 const icons = [
     {
-        path: '/',
+        path: 'https://github.com/oseogbe',
         name: <RiGithubFill />
     },
     {
-        path: '/',
+        path: 'https://www.linkedin.com/in/osememen-ogbe',
         name: <RiLinkedinFill />
     },
     {
@@ -34,7 +34,12 @@ const Socials = ({ containerStyles, iconStyles }: SocialsProps) => {
     return (
         <div className={`${containerStyles}`}>
             {icons.map((icon, i) => (
-                <Link key={i} href={icon.path}><div className={`${iconStyles}`}>{icon.name}</div></Link>
+                <Link
+                    key={i}
+                    href={icon.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                ><div className={`${iconStyles}`}>{icon.name}</div></Link>
             ))}
         </div>
     )

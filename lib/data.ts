@@ -14,7 +14,7 @@ export const projectData = [
         categoryText: 'next js',
         name: 'Dearfabrics',
         description: 'An e-commerce solution I built for a client with Next.js (Typescript) and Sanity.io (a headless CMS). Some other packages integrated within the project include TailwindCSS, Swiper.js, Zustand, UseShoppingCart and Paystack.',
-        link: 'https://dearfabrics.vercel.app',
+        link: 'https://dearfabrics.com',
         github: 'https://github.com/oseogbe/dearfabrics'
     },
     {

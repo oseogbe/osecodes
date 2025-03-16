@@ -1,15 +1,12 @@
 "use client"
 
-import Image from "next/image"
-
-import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card"
-
-import { Swiper, SwiperSlide } from "swiper/react"
-
-import 'swiper/css'
-import 'swiper/css/pagination'
-
-import { Pagination } from "swiper/modules"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from "swiper/modules";
 
 const reviewsData = [
     {
@@ -50,9 +47,14 @@ const reviewsData = [
     },
 ]
 
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const Reviews = () => {
     return (
-        <section className="mb-12 xl:mb-32">
+        <motion.section className="mb-12 xl:mb-32" initial="hidden" whileInView="visible" variants={sectionVariants}>
             <div className="container mx-auto">
                 <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
                 <Swiper
@@ -103,7 +105,7 @@ const Reviews = () => {
                     }
                 </Swiper>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

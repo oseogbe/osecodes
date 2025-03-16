@@ -1,22 +1,23 @@
 "use client"
 
-import Link from "next/link"
-import { Button } from "./ui/button"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from "swiper/modules";
+import ProjectCard from "./ProjectCard";
+import { projectData } from "@/lib/data";
 
-import { Swiper, SwiperSlide } from "swiper/react"
-
-import 'swiper/css'
-import 'swiper/css/pagination'
-
-import { Pagination } from "swiper/modules"
-
-import ProjectCard from "./ProjectCard"
-
-import { projectData } from "@/lib/data"
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const Work = () => {
     return (
-        <section className="relative mb-12 xl:mb-48">
+        <motion.section className="relative mb-12 xl:mb-48" initial="hidden" whileInView="visible" variants={sectionVariants}>
             <div className="container mx-auto">
                 <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
                     <h2 className="section-title mb-4">Latest Projects</h2>
@@ -46,7 +47,7 @@ const Work = () => {
                     </Swiper>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

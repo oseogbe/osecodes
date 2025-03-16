@@ -1,13 +1,8 @@
 "use client"
 
-import { GanttChartSquare, Blocks, Gem } from "lucide-react"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle
-} from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { GanttChartSquare, Blocks, Gem } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const servicesData = [
     {
@@ -25,30 +20,42 @@ const servicesData = [
         title: 'Dev-Ops',
         description: 'Streamline your development process and enhance operational efficiency. With expertise in CI/CD pipelines, cloud infrastructure, and automated workflows, I help bridge the gap between development and operations for faster, more reliable deployments.'
     },
-]
+];
+
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, staggerChildren: 0.5 } },
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const Services = () => {
     return (
-        <section className="mb-12 xl:mb-36">
+        <motion.section className="mb-12 xl:mb-36" initial="hidden" whileInView="visible" variants={sectionVariants}>
             <div className="container mx-auto">
                 <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">
                     My Services
                 </h2>
                 <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
                     {servicesData.map((item, i) => (
-                        <Card key={i} className="w-full relative max-w-[424px] flex flex-col items-center pt-24 pb-10 xl:pt-16 xl:pb-0">
-                            <CardHeader className="text-primary absolute -top-[60px]">
-                                <div className="w-[140px] h-[80px] bg-white dark:bg-background flex items-center justify-center">{item.icon}</div>
-                            </CardHeader>
-                            <CardContent className="text-center">
-                                <CardTitle className="mb-4">{item.title}</CardTitle>
-                                <CardDescription className="text-lg">{item.description}</CardDescription>
-                            </CardContent>
-                        </Card>
+                        <motion.div key={i} variants={cardVariants}>
+                            <Card className="w-full relative max-w-[424px] flex flex-col items-center pt-24 pb-10 xl:pt-16 xl:pb-0">
+                                <CardHeader className="text-primary absolute -top-[60px]">
+                                    <div className="w-[140px] h-[80px] bg-white dark:bg-background flex items-center justify-center">{item.icon}</div>
+                                </CardHeader>
+                                <CardContent className="text-center">
+                                    <CardTitle className="mb-4">{item.title}</CardTitle>
+                                    <CardDescription className="text-lg">{item.description}</CardDescription>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

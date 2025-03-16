@@ -1,20 +1,9 @@
 "use client"
 
-import Image from "next/image"
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
-
-import DevImg from "./DevImg"
-
-import {
-    User2,
-    MailIcon,
-    HomeIcon,
-    PhoneCall,
-    GraduationCap,
-    Calendar,
-    Briefcase
-} from "lucide-react"
+import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import DevImg from "./DevImg";
+import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from "lucide-react";
 
 const infoData = [
     {
@@ -126,11 +115,22 @@ const tools = [
     "/about/wordpress.svg",
 ]
 
+const sectionVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const About = () => {
-    const getData = (arr: any[], title: string) => arr.find(item => item.title === title)
+    const getData = (arr: any[], title: string) => arr.find(item => item.title === title);
 
     return (
-        <section className="xl:h-min-[860px] pb-12 xl:py-24">
+        <motion.section
+            className="xl:h-min-[860px] pb-12 xl:py-24"
+            initial="hidden"
+            whileInView="visible"
+            variants={sectionVariants}
+            viewport={{ amount: 0.5 }}
+        >
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About me</h2>
                 <div className="flex flex-col xl:flex-row">
@@ -247,7 +247,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

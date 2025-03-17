@@ -57,12 +57,15 @@ const Hero = () => {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions)
 
-        if (leftDivRef.current) observer.observe(leftDivRef.current)
-        if (rightDivRef.current) observer.observe(rightDivRef.current)
+        const leftDiv = leftDivRef.current;
+        const rightDiv = rightDivRef.current;
+
+        if (leftDiv) observer.observe(leftDiv)
+        if (rightDiv) observer.observe(rightDiv)
 
         return () => {
-            if (leftDivRef.current) observer.unobserve(leftDivRef.current)
-            if (rightDivRef.current) observer.unobserve(rightDivRef.current)
+            if (leftDiv) observer.unobserve(leftDiv)
+            if (rightDiv) observer.unobserve(rightDiv)
         }
     }, [leftDivControls, rightDivControls])
 

@@ -38,7 +38,7 @@ const careerData = [
         title: "education",
         data: [
             {
-                institution: "University of Derby",
+                institution: "University of Derby, UK",
                 certificate: "Bachelor of Science: Computing and Information Technologies",
                 years: "2019 - 2020"
             },

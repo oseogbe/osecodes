@@ -15,7 +15,7 @@ const ContactPage = () => {
                             Say Hello 👋
                         </div>
                         <h1 className="heading-1 max-w-md mb-8">Let&apos;s Work Together.</h1>
-                        <p className="subtitle max-w-[400px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod saepe assumenda dolorem reprehenderit laboriosam eveniet!</p>
+                        <p className="subtitle max-w-[400px]">Have a project in mind or just want to say hello? I&apos;m always open to discussing new ideas, collaborations, or opportunities. LetI&apos;s create something amazing together!</p>
                     </div>
                     <div className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat">
                     </div>

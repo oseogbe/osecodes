@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,6 +19,7 @@ const config = {
       "md": "768px",
       "lg": "1024px",
       "xl": "1400px",
+      "2xl": "1600px",
     },
     extend: {
       colors: {
@@ -83,8 +84,8 @@ const config = {
         hero_shape: 'url(/hero/shape-1.svg)',
         hero_shape2_light: 'url(/hero/shape-2-light.svg)',
         hero_shape2_dark: 'url(/hero/shape-2-dark.svg)',
-        about_shape_light: 'url(/about/shape-light.svg)',
-        about_shape_dark: 'url(/about/shape-dark.svg)',
+        about_me_light: 'url(/about/osecodes-light.png)',
+        about_me_dark: 'url(/about/osecodes-dark.png)',
         dots_light: 'url(/dots-light.svg)',
         dots_dark: 'url(/dots-dark.svg)',
         work_project_bg_light: 'url(/work/project-bg-light.png)',

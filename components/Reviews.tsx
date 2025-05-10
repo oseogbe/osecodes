@@ -11,26 +11,26 @@ import { Pagination } from "swiper/modules";
 const reviewsData = [
     {
         avatar: '/reviews/avatar-5.png',
-        name: 'Sofia Jackson',
-        job: 'Baker',
+        name: 'Maurice Hicks',
+        job: 'MD, MaxFinance',
         review: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, sapiente repellendus repellat possimus eligendi sequi!'
     },
     {
         avatar: '/reviews/avatar-4.png',
-        name: 'Jerry Parker',
+        name: 'Nora Mcdonalid',
         job: 'Manager, ABDelivery',
         review: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, sapiente repellendus repellat possimus eligendi sequi!'
     },
     {
         avatar: '/reviews/avatar-2.png',
-        name: 'Adnan Bashir',
-        job: 'Entrepreneur',
+        name: 'Eva Wheeler',
+        job: 'CEO, Beauty&Spa',
         review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero omnis, vel quasi nobis repudiandae magni.'
     },
     {
         avatar: '/reviews/avatar-6.png',
         name: 'Teju Gbenga',
-        job: 'CEO, Beauty&Spa',
+        job: 'Entrepreneur',
         review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi saepe vitae molestias illum deleniti.'
     },
     {

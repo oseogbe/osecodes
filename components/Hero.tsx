@@ -15,6 +15,7 @@ import Badge from "./Badge"
 import Socials from "./Socials"
 
 import { projectData } from "@/lib/data";
+import Image from "next/image";
 
 const Hero = () => {
     const rolesEl = useRef<HTMLSpanElement>(null)
@@ -25,7 +26,7 @@ const Hero = () => {
 
     useEffect(() => {
         const typed = new Typed(rolesEl.current, {
-            strings: ['Full-stack Developer', 'Mobile Developer', 'Dev-Ops Engineer'],
+            strings: ['Full-stack Developer', 'Dev-Ops Engineer', 'AI Engineer'],
             typeSpeed: 70,
             loop: true,
             smartBackspace: true,
@@ -120,7 +121,7 @@ const Hero = () => {
                         <Badge
                             containerStyles="absolute top-[24%] -left-[5rem]"
                             icon={RiBriefcase4Fill}
-                            endCountNum={4}
+                            endCountNum={3}
                             badgeText="Years of Experience"
                         />
                         <Badge
@@ -132,14 +133,21 @@ const Hero = () => {
                         <Badge
                             containerStyles="absolute top-[55%] -right-8"
                             icon={RiTeamFill}
-                            endCountNum={2}
+                            endCountNum={3}
                             // endCountText="k"
                             badgeText="Certificates"
                         />
                         <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
-                        <DevImg
+                        {/* <DevImg
                             containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-                            imgSrc=""
+                            imgSrc="/hero/ose-animated_1.png"
+                        /> */}
+                        <Image
+                            src="/hero/ose-animated.png"
+                            alt="hero-bg"
+                            width={700}
+                            height={700}
+                            className="w-[650px] h-[480px] z-10"
                         />
                     </motion.div>
                 </div>

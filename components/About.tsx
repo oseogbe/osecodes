@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import DevImg from "./DevImg";
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 const infoData = [
     {
@@ -66,8 +67,13 @@ const careerData = [
         title: "experience",
         data: [
             {
+                company: "Moneta",
+                role: "Backend Engineer, Banking Aggregation Team",
+                years: "February 2025 till now"
+            },
+            {
                 company: "Legend",
-                role: "Development Manager",
+                role: "Full-stack Developer",
                 years: "May 2024 - Dec 2024"
             },
             {
@@ -80,11 +86,11 @@ const careerData = [
                 role: "Full-stack Developer",
                 years: "Jan 2023 - Oct 2023"
             },
-            {
-                company: "Reimnet",
-                role: "Back-end Developer",
-                years: "Jul 2021 - Jun 2022"
-            },
+            // {
+            //     company: "Reimnet",
+            //     role: "Back-end Developer",
+            //     years: "Jul 2021 - Jun 2022"
+            // },
         ]
     }
 ]
@@ -92,7 +98,7 @@ const careerData = [
 const skillsData = [
     {
         title: "back-end",
-        data: ['PHP', 'Laravel', 'Node.js', 'Express.js', 'Nest.js']
+        data: ['PHP', 'Laravel', 'Node.js', 'Express.js', 'Python']
     },
     {
         title: "front-end",
@@ -104,7 +110,7 @@ const skillsData = [
     },
     {
         title: "dev-ops",
-        data: ['Git', 'Github Actions']
+        data: ['Git', 'Github Actions', 'Docker', 'AWS']
     },
 ]
 
@@ -135,7 +141,20 @@ const About = () => {
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About me</h2>
                 <div className="flex flex-col xl:flex-row">
                     <div className="hidden xl:flex flex-1 relative">
-                        <DevImg containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc="" />
+                        {/* <DevImg containerStyles="bg-about_me_light dark:bg-about_me_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc="" /> */}
+                        <Image
+                            src="/about/osecodes-light.png"
+                            alt="Developer Illustration"
+                            fill
+                            className="dark:hidden object-contain"
+                        />
+                        <Image
+                            src="/about/osecodes-dark.png"
+                            alt="Developer Illustration"
+                            fill
+                            className="hidden dark:block object-contain"
+                        />
+
                     </div>
                     <div className="flex-1">
                         <Tabs defaultValue="personal">
@@ -147,10 +166,9 @@ const About = () => {
                             <div className="text-lg mt-12 xl:mt-8">
                                 <TabsContent value="personal">
                                     <div className="text-center xl:text-left">
-                                        <h3 className="heading-3 mb-4">Unmatched Service Quality for Over 4 years</h3>
-                                        <p className="subtitle max-w-xl mx-auto xl:mx-0 text-justify">Greetings! I&apos;m a diligent and analytical full-stack developer with a
-                                            knack for designing high-performance web applications
-                                            customized to fulfill clients&apos; diverse requirements. My passion lies in crafting digital solutions that not only meet your needs but also have the potential for monetization.
+                                        <h3 className="heading-3 mb-4">Building Innovative Solutions for Tomorrow</h3>
+                                        <p className="subtitle max-w-xl mx-auto xl:mx-0 text-justify">Greetings! I&apos;m a full-stack and dev-ops engineer with a strong focus on delivering high-performing, feature-rich and scalable software solutions.
+                                            I&apos;m particularly excited by the potential of AI for automation and business development, and I&apos;m eager to be at the forefront of such innovation.
                                             Let&apos;s connect and collaborate to achieve success.</p>
                                         <div className="grid xl:grid-cols-2 gap-4 mb-12">
                                             {

@@ -18,6 +18,15 @@ export const projectData = [
         github: 'https://github.com/oseogbe/dearfabrics'
     },
     {
+        image: '/work/5.png',
+        category: ['node js', 'react js'],
+        categoryText: 'node js & react js',
+        name: 'jobplug9ja',
+        description: 'A job board platform for the Nigerian market, connecting job seekers with employers. Built with Node.js, React.js, and MongoDB.',
+        link: '/#',
+        github: 'https://github.com/oseogbe/9jajobplug'
+    },
+    {
         image: '/work/3.png',
         category: ['laravel', 'vue js'],
         categoryText: 'laravel & vue js',
